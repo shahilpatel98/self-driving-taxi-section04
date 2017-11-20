@@ -139,7 +139,7 @@ Car &Car::charge(int duration)
     duration = duration + 1;
     CarCharge = CarCharge +10;
   }
-    return int(CarCharge);
+    return 0;
 }
 
 Car &Car::toggle_lights(bool exterior)
