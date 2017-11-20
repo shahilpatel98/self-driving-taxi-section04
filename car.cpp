@@ -23,6 +23,9 @@ Car::~Car() {}
 // REQUIRES OTHER FUNCTIONS
 Car &Car::pickup_request(std::vector<int> pickup_coords, std::vector<int> drop_coords, int new_passengers)
 {
+  (void)pickup_coords;
+  (void)drop_coords;
+  (void)new_passengers;
     return *this;
 }
 
@@ -43,30 +46,38 @@ Car &Car::shift()
 
 Car &Car::accelerate(int force, int target_speed)
 {
+  (void)force;
+  (void)target_speed;
     return *this;
 }
 
 Car &Car::decelerate(int force, int target_speed)
 {
+  (void)force;
+  (void)target_speed;
     return *this;
 }
 
 Car &Car::add_trip(std::vector<std::vector<int>> coords, int new_passengers)
 {
+  (void)coords;
+  (void)new_passengers;
     return *this;
 }
 
 bool Car::check_distance(std::vector<int> pickup, std::vector<int> dropoff)
 {
+  (void)pickup;
+  (void)dropoff;
     return true;
 }
 
-bool Car::is_home() 
+bool Car::is_home()
 {
     return false;
 }
 
-bool Car::has_passengers() 
+bool Car::has_passengers()
 {
     return false;
 }
@@ -74,6 +85,10 @@ bool Car::has_passengers()
 // Calculates distance between two points.
 int Car::distance(double x1, double y1, double x2, double y2)
 {
+  (void)x1;
+  (void)y1;
+  (void)x2;
+  (void)y2;
     return 0;
 }
 
@@ -114,15 +129,21 @@ Car &Car::unlock()
 
 Car &Car::set_wipers(int level)
 {
+  (void)level;
     return *this;
 }
 
 Car &Car::charge(int duration)
-{
-    return *this;
+{ int CarCharge = 0;
+  while(CarCharge < 100);{
+    duration = duration + 1;
+    CarCharge = CarCharge +10;
+  }
+    return int(CarCharge);
 }
 
 Car &Car::toggle_lights(bool exterior)
 {
+  (void)exterior;
     return *this;
 }
